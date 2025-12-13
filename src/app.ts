@@ -2,8 +2,16 @@ import express from "express";
 import cmpRoute from "./routes/cmp";
 import fundamentalsRoute from "./routes/fundamentals";
 import fullRoute from "./routes/full";
+const cors = require('cors');
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
+
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 
 app.use(express.json());
 
