@@ -1,0 +1,18 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const yahooService_1 = require("../services/yahooService");
+const router = express_1.default.Router();
+// since base path is already /api/cmp
+router.get("/", async (req, res) => {
+    const symbol = req.query.symbol;
+    if (!symbol) {
+        return res.status(400).json({ error: "Symbol is required" });
+    }
+    const data = await (0, yahooService_1.getCMP)(symbol);
+    return res.json(data);
+});
+exports.default = router;
