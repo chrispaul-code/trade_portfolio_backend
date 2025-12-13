@@ -591,14 +591,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Support
-
-For issues, questions, or suggestions:
-
-- Open an issue on [GitHub Issues](https://github.com/yourusername/trade-portfolio-backend/issues)
-- Email: support@example.com
-- Documentation: [Wiki](https://github.com/yourusername/trade-portfolio-backend/wiki)
-
----
-
 **Built with 💼 for traders and investors worldwide**
